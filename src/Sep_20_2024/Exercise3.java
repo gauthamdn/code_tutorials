@@ -32,11 +32,14 @@ public class Exercise3 {
             }
 
         }
-        System.out.println("temp array: "+Arrays.toString(temp_array));
+        for(int i=0;i<len;i++){
+            nums[i]=temp_array[i];
+        }
+        //System.out.println("temp array: "+Arrays.toString(temp_array));
         return j;
 
        /*
-       Code if we want to create an array with just unique elements
+       below Code if we want to create an array with just unique elements
        int[] temp_array2=new int[j];
         for(int i=0;i<temp_array2.length;i++){
             temp_array2[i]=temp_array[i];
@@ -51,9 +54,12 @@ public class Exercise3 {
     public static void main(String[] args) {
 
         if(nums.length == 0 || nums.length == 1){
-            System.out.println(nums.length);
+            System.out.println(nums.length+ " "+ Arrays.toString(nums));
+            //System.out.println(Arrays.toString(nums));
         }
-        else
-            System.out.println(remove_duplicates(nums));
+        else{
+            System.out.println(remove_duplicates(nums)+" "+Arrays.toString(nums));
+        }
+
     }
 }
