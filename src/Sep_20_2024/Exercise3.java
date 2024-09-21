@@ -22,8 +22,10 @@ public class Exercise3 {
 
         int len=nums.length;
         int[] temp_array=new int[len];
+        //first element of the nums array is unique and hence copying it to temp_array
         temp_array[0]=nums[0];
 
+        //starting the loops from index 1( second element in the array)
         int j=1;
         for (int i=1;i<len-1;i++){
             if(nums[i]!=nums[i+1]){
@@ -54,11 +56,11 @@ public class Exercise3 {
     public static void main(String[] args) {
 
         if(nums.length == 0 || nums.length == 1){
-            System.out.println(nums.length+ " "+ Arrays.toString(nums));
+            System.out.println(nums.length+ ", nums: "+ Arrays.toString(nums));
             //System.out.println(Arrays.toString(nums));
         }
         else{
-            System.out.println(remove_duplicates(nums)+" "+Arrays.toString(nums));
+            System.out.println(remove_duplicates(nums)+", nums: "+Arrays.toString(nums));
         }
 
     }
