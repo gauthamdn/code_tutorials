@@ -15,7 +15,6 @@ public class Exercise4 {
 
     public static void rotate_array(int n){
 
-        //int i=0;
         int len=nums.length;
         int[] temp_array = new int[len] ;
 
