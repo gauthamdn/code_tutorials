@@ -28,6 +28,7 @@ public class Exercise6 {
     public static String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
     static int maxWidth=16;
 
+
     public static void main(String[] args) {
 
         // method to split the words into multiple lines for the given maxWidth
@@ -60,7 +61,7 @@ public class Exercise6 {
 
         //   System.out.println("num_of_words: "+num_of_words+"num_of_chars: "+num_of_chars+"num_of_space_needed: "+num_of_space_needed);
         s = add_right_padding(s,num_of_space_needed);
-        //   System.out.println("left_justified_text is : "+s);
+
         return s;
     }
 
@@ -147,14 +148,15 @@ public class Exercise6 {
         int maxWidth_adjusted_text_index = 0;
         for (int i = 0; i < words.length; i++) {
 
-
-            if(temp_sentence.length()+words[i].length()<=16){
-                //    System.out.println("temp sentance is still less than 16");
+          //  System.out.println("nextword : " +words[i]+" , word length: "+words[i].length());
+            // if sentence is less than 16 char , else if more than 16 char
+            if(temp_sentence.length()+words[i].length()+1<=maxWidth){
                 temp_sentence = temp_sentence+" "+words[i];
             }else{
-                //   System.out.println("temp sentance more than 16 so break");
+
                 maxWidth_adjusted_text[maxWidth_adjusted_text_index]=temp_sentence;
                 maxWidth_adjusted_text_index++;
+
                 //assign the last word that exceed 16char to temp sentence
                 temp_sentence=words[i];
                 if(i==words.length-1){
@@ -176,6 +178,8 @@ public class Exercise6 {
             }
 
         }
+
+
         String[] final_text = new String[justified_text_size];
 
         for(int i=0;i<final_text.length;i++){
