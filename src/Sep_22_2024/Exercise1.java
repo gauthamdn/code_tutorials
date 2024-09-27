@@ -23,26 +23,25 @@ public class Exercise1 {
         String s = "abcabcbb";
         //String s = "pwwkew";
         //String s = "111111";
+        //String s ="";
         String maxLengthStr = "";
         String finalMaxLengthStr = "";
         int maxLength = 1;
 
         for(int i=0;i<s.length();i++){
-           // System.out.print(s.charAt(i));
+            // Assign maxLength string to the first char
             maxLengthStr = String.valueOf(s.charAt(i));
-            //System.out.println("maxLengthStr: "+maxLengthStr);
+
             for(int j=i+1;j<s.length();j++){
-              //  System.out.println("Comparing maxLengthStr: "+maxLengthStr+" with char at j="+j+" is " + s.charAt(j));
+
+                // Check if the next char is already in the MaxlengthString , if yes , then reset the max length string, else increment
                 if(maxLengthStr.contains(String.valueOf(s.charAt(j)))){
-                  //  System.out.println("In IF" );
                     maxLengthStr="";
-                   break;
+                    break;
                 }else {
-                   // System.out.println("IN ELSE");
                     maxLengthStr+=s.charAt(j);
                     if(maxLengthStr.length()>maxLength){
                         maxLength++;
-                      //  System.out.println("maxlength= "+maxLengthStr);
                         finalMaxLengthStr = maxLengthStr;
                     }
 
@@ -50,7 +49,7 @@ public class Exercise1 {
             }
         }
 
-        System.out.println("Max Length = "+finalMaxLengthStr.length()+" Max Length String is : "+finalMaxLengthStr);
+        System.out.println("Max Length = "+finalMaxLengthStr.length()+", Max Length String is : "+finalMaxLengthStr);
 
     }
 
