@@ -1,5 +1,6 @@
 package src.datastructures.queue;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -39,5 +40,18 @@ public class Queue <T> implements Iterable<T> {
     @Override
     public Iterator<T> iterator() {
         return list.iterator();
+    }
+
+
+    public static void main(String[] args) {
+        Queue q = new Queue();
+        //q.poll();
+        q.offer("Hello");
+        q.offer("World");
+        System.out.println(q.size());
+        for(int i=0;i<=q.size();i++) {
+            System.out.println(q.poll());
+        }
+
     }
 }
