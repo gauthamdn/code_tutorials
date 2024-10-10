@@ -221,10 +221,12 @@ public class HashTableSeperateChaining<K,V> implements Iterator<K> {
     }
 
 
+    
     public static void main(String[] args) {
         HashTableSeperateChaining hs = new HashTableSeperateChaining();
         hs.add(12,"User1");
         hs.add(31,"User2");
+        hs.add(22,"user3");
         System.out.println(hs.keys());
         System.out.println(hs.Values() );
     }
