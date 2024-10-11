@@ -8,10 +8,13 @@ public class finbonacci {
 
         for(int i=0;i<n;i++){
             System.out.print(fibonacci(i)+" ");
+            System.out.println("");
         }
 
 
     }
+    
+    
 
     private static int fibonacci(int n) {
 
